@@ -25,15 +25,13 @@ int main() {
 
     // Coloca o primeiro navio diagonal no tabuleiro
     for (int i = 0; i < 3; i++) {
-        tabuleiro[navio_diag1_linha + i][navio_diag1_coluna + i] = 3; // Marca a posição do navio diagonal crescente no tabuleiro
+        tabuleiro[navio_diag1_linha + i][navio_diag1_coluna + i] = 3; // Marca a posição do navio diagonal no tabuleiro
     }
 
     // Coloca o segundo navio diagonal no tabuleiro
     for (int i = 0; i < 3; i++) {
         tabuleiro[navio_diag2_linha + i][navio_diag2_coluna - i] = 3; // Marca a posição do navio diagonal no tabuleiro
     }
-
-
 
 
     // Coloca o navio horizontal no tabuleiro
@@ -57,7 +55,7 @@ int main() {
         printf(" %s ", coluna[i]); // Imprime o cabeçalho do tabuleiro
         for (int j = 0; j < 10; j++) {
             if (tabuleiro[i][j] == 0) {
-                printf(" 0 "); // Imprime um ponto se a posição estiver vazia
+                printf(" 0 "); // Imprime 0 se a posição estiver vazia
             } else {
                 printf(" 3 "); // Imprime um 3 se a posição estiver ocupada por um navio
             }
@@ -65,8 +63,9 @@ int main() {
         printf("\n");
     }
 
-    printf("\n");// Tive muita dificuldade para conseguir chegar nesse ponto e precisei de ajudas extras
-    //Preciso do feedback do professor 
+    printf("\n");
+    // Tive muita dificuldade para conseguir chegar nesse ponto e precisei de ajudas extras
+    //Preciso do feedback do professor, muito obrigado
 
     
     return 0;
