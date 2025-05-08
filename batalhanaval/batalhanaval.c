@@ -14,12 +14,28 @@ int main() {
 
     // Declara os navios
     // Cada navio é representado por um vetor 3x3
-    int navio_hor_linha = 2; // Declara a linha do navio horizontal
+    int navio_hor_linha = 3; // Declara a linha do navio horizontal
     int navio_hor_coluna =3; // Declara a coluna do navio horizontal
     int navio_ver_linha = 5; // Declara a linha do navio vertical
     int navio_ver_coluna = 5; // Declara a coluna do navio vertical
+    int navio_diag1_linha = 0 , navio_diag1_coluna = 0; // Navio diagonal (crescente)
+    int navio_diag2_linha = 7, navio_diag2_coluna = 9; // Navio diagonal (decrescente)
 
     //Agora nos vamos collocar os navios no tabuleiro
+
+    // Coloca o primeiro navio diagonal no tabuleiro
+    for (int i = 0; i < 3; i++) {
+        tabuleiro[navio_diag1_linha + i][navio_diag1_coluna + i] = 3; // Marca a posição do navio diagonal crescente no tabuleiro
+    }
+
+    // Coloca o segundo navio diagonal no tabuleiro
+    for (int i = 0; i < 3; i++) {
+        tabuleiro[navio_diag2_linha + i][navio_diag2_coluna - i] = 3; // Marca a posição do navio diagonal no tabuleiro
+    }
+
+
+
+
     // Coloca o navio horizontal no tabuleiro
     for (int i = 0; i < 3; i++) {
         tabuleiro[navio_hor_linha][navio_hor_coluna + i] = 3; // Marca a posição do navio horizontal no tabuleiro
